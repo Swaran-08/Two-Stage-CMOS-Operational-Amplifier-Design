@@ -98,15 +98,14 @@ The initial design achieved an open-loop gain of **35 dB**. To improve the perfo
 Initially, **M5** was intentionally left unchanged because its output resistance contributes only a second-order effect to the differential gain.
 Later, during the **CMRR characterization**, M5 was revisited. Its channel length was increased to improve the output resistance of the tail current source while maintaining approximately the same drain current.
 This modification had **negligible effect on the differential gain**, but reduced the common-mode gain and improved the overall CMRR.
-<p align="center">
-    <img src="image/Operating_point_&_AC_performance.png" width="300">
-</p>
 ### Bias Circuit
 - During transistor optimization, an ideal **458 mV** bias source was used for M5.
 - After completing the sizing, the ideal bias was replaced with a self-biased current reference that generated approximately the same bias voltage and operating currents.
 
 # Performance Characterization
-
+<p align="center">
+    <img src="image/Operating_point_&_AC_performance.png" width="300">
+</p>
 After completing the transistor sizing and bias optimization, the operational amplifier was characterized using DC, AC and transient analyses.
 
 ---
