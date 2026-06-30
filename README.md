@@ -68,7 +68,7 @@ Therefore,
 
 These currents were used as the design currents throughout the amplifier.
 <p align="center">
-    <img src="image/schematic.png" width="300">
+    <img src="image/schematic.png" width="600">
 </p>
 ## Transistor-Level Optimization
 
