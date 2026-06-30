@@ -105,3 +105,199 @@ This modification had **negligible effect on the differential gain**, but reduce
 - During transistor optimization, an ideal **458 mV** bias source was used for M5.
 - After completing the sizing, the ideal bias was replaced with a self-biased current reference that generated approximately the same bias voltage and operating currents.
 
+# Performance Characterization
+
+After completing the transistor sizing and bias optimization, the operational amplifier was characterized using DC, AC and transient analyses.
+
+---
+
+## DC Operating Point
+
+The DC operating point verifies that all transistors operate in the saturation region with the desired bias currents and output voltages.
+
+📷 **Insert DC Operating Point Screenshot Here**
+
+**Final DC Operating Point**
+
+| Parameter | Value |
+|-----------|-------|
+| Vbias | **458.56 mV** |
+| I1 = I2 = I3 = I4 | **6.12 µA** |
+| I5 | **12.25 µA** |
+| I6 | **≈12.9 µA** |
+| I7 | **12.93 µA** |
+| VOUT1 | **1.275 V** |
+| VOUT | **1.02 V** |
+
+---
+
+## Output Swing
+
+The output swing was measured by configuring the op-amp as a unity-gain buffer and sweeping the input voltage from **0 V to 1.8 V**.
+
+📷 **Insert Output Swing Screenshot Here**
+
+| Parameter | Value |
+|-----------|-------|
+| Linear Output Swing | **0 – 1.56 V** |
+| Maximum Output Swing | **0 – 1.64 V** |
+
+---
+
+## Slew Rate
+
+The slew rate was measured using transient analysis by applying a pulse input and calculating the slope of the output waveform.
+
+📷 **Insert Positive Slew Rate Screenshot Here**
+
+Positive Slew Rate
+
+\[
+SR_+=\frac{\Delta V}{\Delta t}
+=\frac{115.13mV}{20.51ns}
+=5.61V/\mu s
+\]
+
+---
+
+📷 **Insert Negative Slew Rate Screenshot Here**
+
+Negative Slew Rate
+
+\[
+SR_-=\frac{\Delta V}{\Delta t}
+=\frac{151.81mV}{26.48ns}
+=5.73V/\mu s
+\]
+
+The measured slew rate closely matches the theoretical approximation
+
+\[
+SR\approx\frac{I}{C_C+C_L}
+\]
+
+where
+
+\[
+\frac{12.6\mu A}{1pF+1pF}
+=
+6.3V/\mu s
+\]
+
+which is close to the measured value.
+
+---
+
+## Input Common Mode Range (ICMR)
+
+ICMR was determined by sweeping the common-mode input voltage while monitoring the operating region of every transistor.
+
+📷 **Insert ICMR Screenshot Here**
+
+| Common Mode Voltage | Observation |
+|---------------------|-------------|
+| **< 190 mV** | Multiple transistors leave saturation |
+| **190 mV** | M5, M7 enter Linear Region |
+| **550 mV** | M5 in Linear, M7 in Saturation |
+| **650 mV** | All transistors in Saturation ✅ |
+| **650 mV – 1.545 V** | Normal Operating Region |
+| **>1.545 V** | M1 and M2 enter Linear Region |
+
+**Final ICMR**
+
+\[
+\boxed{650mV\le V_{CM}\le1.545V}
+\]
+
+---
+
+## Common Mode Rejection Ratio (CMRR)
+
+Initially, the measured common-mode gain was
+
+\[
+A_{CM}=-1.71dB
+\]
+
+📷 **Insert Initial Common Mode Gain Screenshot Here**
+
+To improve the CMRR, the output resistance of the tail current source (M5) was increased by increasing its channel length while maintaining approximately the same drain current.
+
+**M5 Optimization**
+
+| Parameter | Before | After |
+|-----------|--------|-------|
+| Width | **275 nm** | **325 nm** |
+| Length | **200 nm** | **245 nm** |
+
+Increasing the output resistance of M5 reduced the common-mode gain without affecting the differential gain significantly.
+
+📷 **Insert Final Common Mode Gain Screenshot Here**
+
+After optimization,
+
+\[
+A_{CM}=-4dB
+\]
+
+Since
+
+\[
+CMRR=A_D-A_{CM}
+\]
+
+\[
+CMRR
+=
+42.5-(-4)
+=
+46.5dB
+\]
+
+---
+
+## Power Supply Rejection Ratio (PSRR)
+
+PSRR indicates the ability of the operational amplifier to reject variations in the power supply voltage.
+
+📷 **Insert PSRR Screenshot Here**
+
+The PSRR was calculated using
+
+\[
+PSRR
+=
+20\log\left(\frac{1}{A_{VDD}}\right)
+\]
+
+where
+
+\[
+A_{VDD}
+=
+\frac{V_{out}}{V_{DD}}
+\]
+
+**Final Result**
+
+| Parameter | Value |
+|-----------|-------|
+| PSRR | **6.15 dB** |
+
+---
+
+## Final Performance Summary
+
+| Parameter | Result |
+|-----------|--------|
+| Open Loop Gain | **42.5 dB** |
+| Unity Gain Bandwidth | **5 MHz** |
+| Phase Margin | **46°** |
+| Power Dissipation | **64 µW** |
+| Positive Slew Rate | **5.61 V/µs** |
+| Negative Slew Rate | **5.73 V/µs** |
+| Linear Output Swing | **0 – 1.56 V** |
+| Maximum Output Swing | **0 – 1.64 V** |
+| ICMR | **0.65 – 1.545 V** |
+| CMRR | **46.5 dB** |
+| PSRR | **6.15 dB** |
