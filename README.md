@@ -60,11 +60,7 @@ Calculated
 
 - gm ≈ **62.8 μS**
 
-For moderate inversion,
-
-\[
-\frac{g_m}{I_D}=10\;V^{-1}
-\]
+For moderate inversion,  gm/id=10.
 
 Therefore,
 - M1 = M2 = **6.3 μA**
