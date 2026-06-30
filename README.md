@@ -143,8 +143,6 @@ The slew rate was measured using transient analysis by applying a pulse input an
 [Slew Rate](image/slewrate+vs-.jpg)
 ### Positive Slew Rate
 
-📷 **Insert Positive Slew Rate Screenshot Here**
-
 | Parameter | Value |
 |-----------|-------|
 | ΔV | **115.13 mV** |
@@ -224,7 +222,7 @@ The optimization reduced the common-mode gain from **-1.71 dB** to **-4 dB**, wh
 
 PSRR measures the ability of the op-amp to reject variations in the supply voltage. A higher PSRR indicates better immunity to supply noise.
 
-📷 **Insert PSRR Analysis Screenshot Here**
+- [PSRR](image/PSRR_Avdd_.png)
 
 The PSRR was calculated from the measured supply-to-output gain (`Avdd`) using:
 
