@@ -67,9 +67,7 @@ Therefore,
 - Tail Current = **12.6 μA**
 
 These currents were used as the design currents throughout the amplifier.
-<p align="center">
-    <img src="image/schematic.png" width="600">
-</p>
+
 ## Transistor-Level Optimization
 
 The initial design achieved an open-loop gain of **35 dB**. To improve the performance, the output resistance (`ro = 1/gds`) of every transistor was analyzed. At each stage, the transistor with the lowest output resistance was identified as the bottleneck and optimized by increasing its channel length while slightly adjusting the width to maintain the required drain current.
@@ -142,9 +140,7 @@ The output swing was measured by configuring the op-amp as a unity-gain buffer a
 ## Slew Rate
 
 The slew rate was measured using transient analysis by applying a pulse input and calculating the maximum slope of the output waveform.
-<p align="center">
-    <img src="image/slewrate+vs-.jpg" width="500">
-</p>
+[Slew Rate](image/slewrate+vs-.jpg)
 ### Positive Slew Rate
 
 📷 **Insert Positive Slew Rate Screenshot Here**
