@@ -67,7 +67,10 @@ Therefore,
 - Tail Current = **12.6 μA**
 
 These currents were used as the design currents throughout the amplifier.
-<img src="image/schematic.png" width="500">
+<p align="center">
+    <img src="image/Operating_point_&_AC_performance.png" width="300">
+</p>
+
 ## Transistor-Level Optimization
 
 The initial design achieved an open-loop gain of **35 dB**. To improve the performance, the output resistance (`ro = 1/gds`) of every transistor was analyzed. At each stage, the transistor with the lowest output resistance was identified as the bottleneck and optimized by increasing its channel length while slightly adjusting the width to maintain the required drain current.
