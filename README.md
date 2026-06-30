@@ -258,31 +258,15 @@ CMRR
 
 ## Power Supply Rejection Ratio (PSRR)
 
-PSRR indicates the ability of the operational amplifier to reject variations in the power supply voltage.
+PSRR measures the ability of the op-amp to reject variations in the supply voltage. A higher PSRR indicates better immunity to supply noise.
 
-📷 **Insert PSRR Screenshot Here**
+📷 **Insert PSRR Analysis Screenshot Here**
 
-The PSRR was calculated using
+The PSRR was calculated from the measured supply-to-output gain (`Avdd`) using:
 
-\[
-PSRR
-=
-20\log\left(\frac{1}{A_{VDD}}\right)
-\]
+`PSRR = 20 log10(1 / Avdd)`
 
-where
-
-\[
-A_{VDD}
-=
-\frac{V_{out}}{V_{DD}}
-\]
-
-**Final Result**
-
-| Parameter | Value |
-|-----------|-------|
-| PSRR | **6.15 dB** |
+**Final PSRR:** **6.15 dB**
 
 ---
 
