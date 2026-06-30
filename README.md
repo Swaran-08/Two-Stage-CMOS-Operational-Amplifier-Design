@@ -207,16 +207,13 @@ Within this range, all MOSFETs operate in saturation and the amplifier functions
 
 The common-mode gain was measured by applying the same AC signal to both input terminals while keeping the amplifier in open-loop configuration.
 
-📷 **Insert Initial Common-Mode Gain Screenshot Here**
-
 Initially, the measured common-mode gain was **-1.71 dB**. To improve CMRR, the output resistance of the tail current source (**M5**) was increased by modifying its dimensions while maintaining nearly the same drain current.
 
 | M5 Parameter | Initial | Optimized |
 |:------------|:-------:|:---------:|
 | Width | 275 nm | 325 nm |
 | Length | 200 nm | 245 nm |
-
-📷 **Insert Optimized Common-Mode Gain Screenshot Here**
+- [Before and Improved](image/Acm_before_vs_after.jpg)
 
 The optimization reduced the common-mode gain from **-1.71 dB** to **-4 dB**, while the differential gain remained unchanged at **42.5 dB**.
 
