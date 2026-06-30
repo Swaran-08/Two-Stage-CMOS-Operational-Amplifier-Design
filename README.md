@@ -203,12 +203,13 @@ ICMR was determined by sweeping the common-mode input voltage while monitoring t
 | **650 mV – 1.545 V** | Normal Operating Region |
 | **>1.545 V** | M1 and M2 enter Linear Region |
 
-**Final ICMR**
+### Final ICMR
 
-\[
-\boxed{650mV\le V_{CM}\le1.545V}
-\]
+| Parameter | Value |
+|-----------|-------|
+| **ICMR** | **650 mV – 1.545 V** |
 
+Within this range, all MOSFETs operate in saturation and the amplifier functions correctly.
 ---
 ## Common-Mode Rejection Ratio (CMRR)
 
