@@ -143,49 +143,49 @@ The output swing was measured by configuring the op-amp as a unity-gain buffer a
 | Maximum Output Swing | **0 – 1.64 V** |
 
 ---
-
 ## Slew Rate
 
-The slew rate was measured using transient analysis by applying a pulse input and calculating the slope of the output waveform.
+The slew rate was measured using transient analysis by applying a pulse input and calculating the maximum slope of the output waveform.
+
+### Positive Slew Rate
 
 📷 **Insert Positive Slew Rate Screenshot Here**
 
-Positive Slew Rate
-
-\[
-SR_+=\frac{\Delta V}{\Delta t}
-=\frac{115.13mV}{20.51ns}
-=5.61V/\mu s
-\]
+| Parameter | Value |
+|-----------|-------|
+| ΔV | **115.13 mV** |
+| Δt | **20.51 ns** |
+| Positive Slew Rate | **5.61 V/µs** |
 
 ---
 
+### Negative Slew Rate
+
 📷 **Insert Negative Slew Rate Screenshot Here**
 
-Negative Slew Rate
+| Parameter | Value |
+|-----------|-------|
+| ΔV | **151.81 mV** |
+| Δt | **26.48 ns** |
+| Negative Slew Rate | **5.73 V/µs** |
 
-\[
-SR_-=\frac{\Delta V}{\Delta t}
-=\frac{151.81mV}{26.48ns}
-=5.73V/\mu s
-\]
+---
 
-The measured slew rate closely matches the theoretical approximation
+### Theoretical Verification
 
-\[
-SR\approx\frac{I}{C_C+C_L}
-\]
+The measured slew rate closely matches the theoretical approximation:
 
-where
+> **SR ≈ I / (Cc + CL)**
 
-\[
-\frac{12.6\mu A}{1pF+1pF}
-=
-6.3V/\mu s
-\]
+| Parameter | Value |
+|-----------|-------|
+| Bias Current (I) | **12.6 µA** |
+| Compensation Capacitor (Cc) | **1 pF** |
+| Load Capacitor (CL) | **1 pF** |
+| Theoretical Slew Rate | **≈ 6.3 V/µs** |
+| Measured Slew Rate | **5.61 – 5.73 V/µs** |
 
-which is close to the measured value.
-
+The measured values closely agree with the theoretical prediction, validating the transient response of the amplifier.
 ---
 
 ## Input Common Mode Range (ICMR)
