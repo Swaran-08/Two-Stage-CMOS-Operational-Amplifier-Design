@@ -247,3 +247,13 @@ The PSRR was calculated from the measured supply-to-output gain (`Avdd`) using:
 | ICMR | **0.65 – 1.545 V** |
 | CMRR | **46.5 dB** |
 | PSRR | **6.15 dB** |
+## Future Improvements
+
+Although the proposed design satisfies the targeted specifications, several improvements can be explored in future work:
+
+- Implement a complete transistor-based self-bias circuit to eliminate external ideal bias sources.
+- Perform full custom layout followed by DRC, LVS and post-layout (PEX) simulations to evaluate parasitic effects.
+- Improve DC gain and CMRR using cascoded current mirrors or gain-boosting techniques.
+- Increase phase margin by optimizing Miller compensation or introducing a nulling resistor.
+- Design a rail-to-rail input/output architecture to achieve a wider input common-mode range and output swing.
+- Perform process, voltage and temperature (PVT) analysis along with Monte Carlo simulations to evaluate robustness against manufacturing variations.
