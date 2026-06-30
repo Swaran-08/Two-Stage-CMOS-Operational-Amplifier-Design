@@ -142,7 +142,9 @@ The output swing was measured by configuring the op-amp as a unity-gain buffer a
 ## Slew Rate
 
 The slew rate was measured using transient analysis by applying a pulse input and calculating the maximum slope of the output waveform.
-
+<p align="center">
+    <img src="image/slewrate+vs-.jpg" width="500">
+</p>
 ### Positive Slew Rate
 
 📷 **Insert Positive Slew Rate Screenshot Here**
