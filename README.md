@@ -95,6 +95,11 @@ The initial design achieved an open-loop gain of **35 dB**. To improve the perfo
 - The PMOS active load was optimized by increasing **L: 200 → 275 nm**, while **W = 275 nm** was maintained.
 - The output resistance increased from **≈440 kΩ → ≈780 kΩ**.
 - Final open-loop gain reached **42.5 dB**.
+- 
+## M5 Optimization
+Initially, **M5** was intentionally left unchanged because its output resistance contributes only a second-order effect to the differential gain.
+Later, during the **CMRR characterization**, M5 was revisited. Its channel length was increased to improve the output resistance of the tail current source while maintaining approximately the same drain current.
+This modification had **negligible effect on the differential gain**, but reduced the common-mode gain and improved the overall CMRR.
 
 ### Bias Circuit
 - During transistor optimization, an ideal **458 mV** bias source was used for M5.
