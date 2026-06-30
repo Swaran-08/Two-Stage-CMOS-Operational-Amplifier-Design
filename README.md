@@ -210,50 +210,28 @@ ICMR was determined by sweeping the common-mode input voltage while monitoring t
 \]
 
 ---
-
 ## Common Mode Rejection Ratio (CMRR)
 
-Initially, the measured common-mode gain was
+The common-mode gain was first measured by applying the same AC signal to both input terminals while keeping the amplifier in open-loop configuration.
+
+📷 **Insert Initial Common-Mode Gain Screenshot Here**
+
+Initially, the measured common-mode gain was **-1.71 dB**, resulting in a relatively low CMRR. To improve it, the output resistance of the tail current source (**M5**) was increased by modifying its dimensions while maintaining nearly the same drain current.
+
+| M5 Parameter | Initial | Optimized |
+|-------------|:-------:|:---------:|
+| Width | 275 nm | 325 nm |
+| Length | 200 nm | 245 nm |
+
+📷 **Insert Optimized Common-Mode Gain Screenshot Here**
+
+After optimization, the common-mode gain reduced to **-4 dB** while the differential gain remained unchanged at **42.5 dB**.
+
+**Final CMRR**
 
 \[
-A_{CM}=-1.71dB
+\boxed{\text{CMRR} = 42.5 - (-4) = 46.5\ \text{dB}}
 \]
-
-📷 **Insert Initial Common Mode Gain Screenshot Here**
-
-To improve the CMRR, the output resistance of the tail current source (M5) was increased by increasing its channel length while maintaining approximately the same drain current.
-
-**M5 Optimization**
-
-| Parameter | Before | After |
-|-----------|--------|-------|
-| Width | **275 nm** | **325 nm** |
-| Length | **200 nm** | **245 nm** |
-
-Increasing the output resistance of M5 reduced the common-mode gain without affecting the differential gain significantly.
-
-📷 **Insert Final Common Mode Gain Screenshot Here**
-
-After optimization,
-
-\[
-A_{CM}=-4dB
-\]
-
-Since
-
-\[
-CMRR=A_D-A_{CM}
-\]
-
-\[
-CMRR
-=
-42.5-(-4)
-=
-46.5dB
-\]
-
 ---
 
 ## Power Supply Rejection Ratio (PSRR)
