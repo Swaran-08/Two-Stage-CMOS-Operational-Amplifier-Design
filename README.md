@@ -155,8 +155,6 @@ The slew rate was measured using transient analysis by applying a pulse input an
 
 ### Negative Slew Rate
 
-📷 **Insert Negative Slew Rate Screenshot Here**
-
 | Parameter | Value |
 |-----------|-------|
 | ΔV | **151.81 mV** |
@@ -186,7 +184,7 @@ The measured values closely agree with the theoretical prediction, validating th
 
 ICMR was determined by sweeping the common-mode input voltage while monitoring the operating region of every transistor.
 
-📷 **Insert ICMR Screenshot Here**
+- [ICMR](image/ICMR_cutoffs_for_individual.png)
 
 | Common Mode Voltage | Observation |
 |---------------------|-------------|
