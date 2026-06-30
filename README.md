@@ -232,6 +232,7 @@ After optimization, the common-mode gain reduced to **-4 dB** while the differen
 \[
 \boxed{\text{CMRR} = 42.5 - (-4) = 46.5\ \text{dB}}
 \]
+
 ---
 
 ## Power Supply Rejection Ratio (PSRR)
