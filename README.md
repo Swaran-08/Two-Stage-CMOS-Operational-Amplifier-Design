@@ -67,8 +67,36 @@ For moderate inversion,
 \]
 
 Therefore,
-
 - M1 = M2 = **6.3 μA**
 - Tail Current = **12.6 μA**
 
 These currents were used as the design currents throughout the amplifier.
+
+## Transistor-Level Optimization
+
+The initial design achieved an open-loop gain of **35 dB**. To improve the performance, the output resistance (`ro = 1/gds`) of every transistor was analyzed. At each stage, the transistor with the lowest output resistance was identified as the bottleneck and optimized by increasing its channel length while slightly adjusting the width to maintain the required drain current.
+
+### Stage 1 – M7 Optimization
+- M7 exhibited the lowest output resistance in the second stage and limited the overall gain.
+- Increased **L: 200 → 270 nm** and **W: 275 → 310 nm**, maintaining **ID ≈ 12.1 µA**.
+- Gain improved from **35 dB → 37.8 dB**, while the output bias shifted closer to mid-supply.
+
+### Stage 2 – M6 Optimization
+- After optimizing M7, M6 became the new bottleneck.
+- Increased **L: 200 → 225 nm** and **W: 450 → 480 nm** to recover the drain current.
+- Overall gain improved from **37.8 dB → 40.1 dB**.
+
+### Stage 3 – M1 & M2 Optimization
+- The first-stage differential pair was optimized by increasing **L: 200 → 300 nm** and **W: 150 → 160 nm**.
+- This significantly increased the intrinsic gain by improving the output resistance while maintaining **ID ≈ 6.1 µA**.
+- The DC operating point remained nearly unchanged.
+
+### Stage 4 – M3 & M4 Optimization
+- The PMOS active load was optimized by increasing **L: 200 → 275 nm**, while **W = 275 nm** was maintained.
+- The output resistance increased from **≈440 kΩ → ≈780 kΩ**.
+- Final open-loop gain reached **42.5 dB**.
+
+### Bias Circuit
+- During transistor optimization, an ideal **458 mV** bias source was used for M5.
+- After completing the sizing, the ideal bias was replaced with a self-biased current reference that generated approximately the same bias voltage and operating currents.
+
