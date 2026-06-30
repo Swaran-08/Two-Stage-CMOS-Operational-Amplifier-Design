@@ -229,7 +229,7 @@ The PSRR was calculated from the measured supply-to-output gain (`Avdd`) using:
 `PSRR = 20 log10(1 / Avdd)`
 
 **Final PSRR:** **6.15 dB**
-
+- [Final Gain & Phase Margin](image/Finalgain&phasemargin.png)
 ---
 
 ## Final Performance Summary
