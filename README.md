@@ -112,10 +112,7 @@ After completing the transistor sizing and bias optimization, the operational am
 
 ## DC Operating Point
 
-The DC operating point verifies that all transistors operate in the saturation region with the desired bias currents and output voltages.
-
-📷 **Insert DC Operating Point Screenshot Here**
-
+The DC operating point verifies that all transistors operate in the saturation region with the desired bias currents and output voltages
 **Final DC Operating Point**
 
 | Parameter | Value |
@@ -134,7 +131,7 @@ The DC operating point verifies that all transistors operate in the saturation r
 
 The output swing was measured by configuring the op-amp as a unity-gain buffer and sweeping the input voltage from **0 V to 1.8 V**.
 
-📷 **Insert Output Swing Screenshot Here**
+- [Output Swing](image/outputswing.png)
 
 | Parameter | Value |
 |-----------|-------|
